@@ -39,7 +39,15 @@ const categoryNames = { html: 'HTML', css: 'CSS', js: 'JavaScript' };
 const projectList = document.querySelector('#project-list');
 const projectCount = document.querySelector('#project-count');
 const filterButtons = document.querySelectorAll('.filter-btn');
-function renderProjects(filter) {
+let currentFilter = 'all';
+function renderProjects(filter=currentFilter) {
+  currentFilter = filter;
+  const query = getSearchQuery()
+  const visible = projects.filter((project) => {
+    const matchesCategory = filter === 'all' || project.category === filter;
+    return matchesCategory && matchesSearch(project, query);
+  });
+  }
   const visible = filter === 'all' ? projects : projects.filter((project) => project.category === filter);
   projectList.replaceChildren();
   visible.forEach((project) => {
@@ -116,5 +124,29 @@ if (form) {
     statusEl.textContent = `Thanks, ${firstName}! Your message is ready. (We connect this form to a real server later.)`;
     form.reset();
     charCount.textContent = '0';
+  });
+}
+const searchInput = document.getElementById("project-search");
+
+function getSearchQuery() {
+  return searchInput ? searchInput.value.trim().toLowerCase() : "";
+}
+
+function matchesSearch(project, query) {
+  if (!query) return true;
+  const title = (project.title || "").toLowerCase();
+  const category = (project.category || "").toLowerCase();
+  const description = (project.description || "").toLowerCase();
+  return (
+    title.includes(query) ||
+    category.includes(query) ||
+    description.includes(query)
+  );
+}
+
+if (searchInput) {
+  searchInput.addEventListener("input", () => {
+    // Call your existing render function here, e.g.:
+    // renderProjects();
   });
 }
