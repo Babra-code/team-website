@@ -1,6 +1,6 @@
 # Team Name: Team Calc
 
-**Live site:** https://github.com/Babra-code/team-website.git
+**Live site:** https://babra-code.github.io/team-website/
                
 
 ## Team
