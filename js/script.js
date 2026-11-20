@@ -35,6 +35,19 @@ const projects = [
   { title: 'Dark mode toggle', category: 'js', description: 'Switches the colour theme and remembers the choice.' },
   { title: 'Flexbox navigation bar', category: 'css', description: 'A header that collapses into a menu button on small screens.' }
 ];
+  
+  {
+  title: "Git & GitHub Team Workflow",
+  description; "We used Git to save our work, create branches, and push our team website to GitHub.",
+  category; "git",
+  tech; "Git, GitHub"
+};
+{
+  title: "Simple To-Do List App",
+  description; "A small app where you can add, check off, and delete daily tasks.",
+  category; "js",
+  tech; "HTML, CSS, JavaScript"
+};
 const categoryNames = { html: 'HTML', css: 'CSS', js: 'JavaScript' };
 const projectList = document.querySelector('#project-list');
 const projectCount = document.querySelector('#project-count');
