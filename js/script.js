@@ -76,7 +76,7 @@ function renderProjects(filter=currentFilter) {
     projectList.append(card);
   });
   projectCount.textContent = `Showing ${visible.length} of ${projects.length} projects`;
-}
+
 if (projectList) {
   renderProjects('all');
   filterButtons.forEach((button) => {
