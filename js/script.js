@@ -11,7 +11,7 @@ if (navToggle && siteNav) {
   });
 }
 const themeToggle = document.querySelector('.theme-toggle');
-const THEME_KEY = 'team-theme';
+const THEME_KEY = 'team-calc-theme';
 function applyTheme(theme) {
   const isDark = theme === 'dark';
   document.body.classList.toggle('dark', isDark);
@@ -33,15 +33,14 @@ const projects = [
   { title: 'Tip calculator', category: 'js', description: 'Reads two inputs and updates the total as you type.' },
   { title: 'Accessible contact form', category: 'html', description: 'Labelled fields, helpful errors and keyboard-friendly controls.' },
   { title: 'Dark mode toggle', category: 'js', description: 'Switches the colour theme and remembers the choice.' },
-  { title: 'Flexbox navigation bar', category: 'css', description: 'A header that collapses into a menu button on small screens.' }
-];
-  
+  { title: 'Flexbox navigation bar', category: 'css', description: 'A header that collapses into a menu button on small screens.' },
   {
-  title: "Git & GitHub Team Workflow",
-  description; "We used Git to save our work, create branches, and push our team website to GitHub.",
-  category; "git",
-  tech; "Git, GitHub"
-};
+   title: "Git & GitHub Team Workflow",
+   description: "We used Git to save our work, create branches, and push our team website to GitHub.",
+   category: "git",
+   tech: "Git, GitHub"
+  }
+];
 {
   title: "Simple To-Do List App",
   description; "A small app where you can add, check off, and delete daily tasks.",
